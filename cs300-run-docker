@@ -3,6 +3,7 @@
 maindir=""
 destdir=cs300
 container_name=cs300-container
+network_name=cs300-network
 
 clean=false
 verbose=false
@@ -54,8 +55,17 @@ vexec () {
     exec "$@"
 }
 
+has_network() {
+    docker network ls | grep $network_name >/dev/null
+}
+
 has_container() {
     [ $( docker ps -a | grep $container_name | wc -l ) -gt 0 ]
+}
+
+create_network() {
+    echo "cs300 network not found, creating one..."
+    docker network create -d bridge cs300-network
 }
 
 remove_containers() {
@@ -78,6 +88,8 @@ start_new_container() {
         --cap-add=SYS_PTRACE --cap-add=NET_ADMIN --security-opt seccomp=unconfined \
         -v "$maindir/home":/home/cs300-user \
         -w "/home/cs300-user" \
+        -p "0.0.0.0:9095:9095" \
+        --network "$network_name" \
         $netarg$sshenvarg $tag
 }
 
@@ -146,6 +158,8 @@ if test -z "$maindir"; then
     echo "Error: could not determine your directory."
     exit 1
 fi
+
+has_network || create_network
 
 if $clean; then
     remove_containers && start_new_container
