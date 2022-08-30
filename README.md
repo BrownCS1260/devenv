@@ -1,6 +1,6 @@
-# CS 300: development environment
+# CS 1260: development environment
 
-This repo contains a minimal dev environment setup for CS 300. In
+This repo contains a minimal dev environment setup for CS 1260. In
 particular, it provides the scripts to create the course Docker
 container.
 
@@ -9,11 +9,11 @@ container.
 ```
 # 1. build docker image locally
 cd docker
-./cs300-build-docker
+./cs1260-build-docker
 
 # 2. start development environment
 cd ..
-./cs300-run-docker
+./cs1260-run-docker
 ```
 
 For detailed setup instructions, refer to our Lab 0 setup guide!
