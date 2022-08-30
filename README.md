@@ -15,7 +15,7 @@ cd docker
 cd ..
 ./cs1260-run-docker
 
-# 3. set up ocaml
+# 3. set up ocaml (first time only)
 sudo ./setup.sh
 ```
 
