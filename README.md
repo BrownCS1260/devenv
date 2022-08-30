@@ -1,4 +1,4 @@
-# CS 1260: development environment
+# CS1260: development environment
 
 This repo contains a minimal dev environment setup for CS 1260. In
 particular, it provides the scripts to create the course Docker
@@ -19,7 +19,7 @@ cd ..
 sudo ./setup.sh
 ```
 
-For detailed setup instructions, refer to our Lab 0 setup guide!
+For detailed setup instructions, refer to [CS300's Lab 0](http://cs.brown.edu/courses/csci0300/2022/assign/labs/lab0.html)!
 
 ## Acknowledgements
 
