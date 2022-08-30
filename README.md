@@ -6,7 +6,7 @@ container.
 
 ## Getting started
 
-```
+```bash
 # 1. build docker image locally
 cd docker
 ./cs1260-build-docker
@@ -14,6 +14,9 @@ cd docker
 # 2. start development environment
 cd ..
 ./cs1260-run-docker
+
+# 3. set up ocaml
+sudo ./setup.sh
 ```
 
 For detailed setup instructions, refer to our Lab 0 setup guide!
