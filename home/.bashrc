@@ -121,9 +121,9 @@ if uname -m | grep 'aarch64\|arm' >/dev/null; then
 fi
 
 # Update opam.
-FIRST_TIME=/initialized
+FIRST_TIME=~/initialized
 if ! [ -f "$FIRST_TIME" ]; then
     sudo ~/setup.sh
-    touch /initialized
+    touch ~/initialized
 fi
 eval $(opam env)
