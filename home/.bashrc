@@ -120,5 +120,10 @@ if uname -m | grep 'aarch64\|arm' >/dev/null; then
     export PATH=$PATH:/usr/x86_64-linux-gnu/bin
 fi
 
-# Update opam. 
+# Update opam.
+FIRST_TIME=/initialized
+if ! [ -f "$FIRST_TIME" ]; then
+    sudo ~/setup.sh
+    touch /initialized
+fi
 eval $(opam env)

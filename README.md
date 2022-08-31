@@ -9,13 +9,14 @@ container.
 ```bash
 # 1. build docker image locally
 cd docker
-./cs1260-build-docker
+sudo ./cs1260-build-docker
 
 # 2. start development environment
 cd ..
-./cs1260-run-docker
+sudo ./cs1260-run-docker
 
 # 3. set up ocaml (first time only)
+cd /vagrant
 sudo ./setup.sh
 ```
 
