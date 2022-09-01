@@ -123,7 +123,8 @@ fi
 # Update opam.
 FIRST_TIME=~/initialized
 if ! [ -f "$FIRST_TIME" ]; then
-    sudo ~/setup.sh
+    sudo ~/setup-1.sh
+    ~/setup-2.sh
     touch ~/initialized
 fi
 eval $(opam env)

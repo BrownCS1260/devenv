@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 # set environment variables for tzdata
 ARG TZ=America/New_York
